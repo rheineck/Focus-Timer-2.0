@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-timer: 'Roboto', sans-serif;
+}
+
+
+.theme-light {
+    --bg-primary: #FFF;
+    --bg-button: #E1E1E6;
+    --btn-select: #02799D;
+    --tt-timer: #323238;
+}
+
+.theme-dark {
+    --bg-primary: #000;
+    --tt-timer: #FFF;
+    --bg-button: hsla(240, 6%, 17%, 1);
+    --btn-select: hsla(195, 74%, 15%, 1);
+}
+
+html, body {
+    background: var(--bg-primary);
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-self: end;
+    align-self: end;
+    margin: 6rem 6rem 0 0;
+}
+
+body {
+    grid-template-columns: 50% 50%;    
+}
+
+main {
+    background: var(--bg-primary);
+    display: grid;
+    grid-template-areas: "A B" "A B";
+    place-content: center;
+    align-items: center;
+    margin: 22rem 23rem;
+}
+
+span {
+    font-family: var(--ff-timer);
+    font-weight: 500;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+    color: var(--tt-timer);
+    text-align: center;
+}
+
+#timer {
+    grid-area: A;
+    padding-right: 19.2rem;
+}
+
+#controls {
+    display: flex;
+    gap: 4rem;
+    padding-top: 4.8rem;
+}
+
+#musics {
+    grid-area: B;
+    display: grid;
+    grid-template-areas: 
+    "A B"
+    "C D";
+    gap: 3.2rem;
+}
+
+.hide {
+    display: none;
+}
+
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.music {
+    background: var(--bg-button);
+}
+
+#musics button {
+    height: 15.2rem;
+    width: 13.8rem;
+    border-radius: 2.4rem;
+}
+
+.on {
+    background: var(--btn-select);
+}
+.volume {
+    -webkit-appearance: none;
+    background: var(--tt-timer);
+    outline: none;
+    height: 4px;
+    width: 9rem;
+    border-radius: 5px;
+    margin-top: 3.2rem
+}
+
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--tt-timer);
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+#controls svg path {
+    fill: var(--tt-timer);
+}
+
+#musics svg path {
+    fill: var(--tt-timer);
+}
